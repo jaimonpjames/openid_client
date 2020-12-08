@@ -57,10 +57,7 @@ class Authenticator {
             await for (var request in requestServer) {
               request.response.statusCode = 200;
               request.response.headers.set('Content-type', 'text/html');
-              request.response.writeln('<html>'
-                  '<h1>You can now close this window</h1>'
-                  '<script>window.close();</script>'
-                  '</html>');
+              request.response.writeln('');
               await request.response.close();
               var result = request.requestedUri.queryParameters;
 

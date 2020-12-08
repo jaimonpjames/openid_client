@@ -57,7 +57,19 @@ class Authenticator {
             await for (var request in requestServer) {
               request.response.statusCode = 200;
               request.response.headers.set('Content-type', 'text/html');
-              request.response.writeln('');
+              request.response.writeln('<html lang="en" style="height: 100%;">'
+                  '<head>'
+                  '<meta charset="UTF-8">'
+                  '<meta name="viewport" content="width=device-width, initial-scale=1.0">'
+                  '<title>Authorized</title>'
+                  '</head>'
+                  '<body style="height: 100%;">'
+                  '<div style="height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;">'
+                  '<h1 style="color:#2DCCA1;">Please wait...</h1>'
+                  '</div>'
+                  '<script>window.close();</script>'
+                  '</body>'
+                  '</html>');
               await request.response.close();
               var result = request.requestedUri.queryParameters;
 

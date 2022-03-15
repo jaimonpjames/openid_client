@@ -65,7 +65,7 @@ class Authenticator {
                   '</head>'
                   '<body style="height: 100%;">'
                   '<div style="height: 100%;width: 100%;display: flex;justify-content: center;align-items: center;">'
-                  '<h1 style="color:#2DCCA1;">Please wait...</h1>'
+                  '<h2 style="color:#2DCCA1;">Authentication Successful. If you have logged in with browser, you can close the browser</h2>'
                   '</div>'
                   '<script>window.close();</script>'
                   '</body>'
